@@ -1,0 +1,19 @@
+
+
+.customerCard{
+    min-width: 550px;
+    border-radius: 85px 25px 60px 25px;
+
+}
+
+.wrapper::-webkit-scrollbar{
+    width: 0;
+}
+
+.imgRounded{
+    border-radius: 100%;
+}
+
+.inputWidth{
+    width: 420px;
+}
