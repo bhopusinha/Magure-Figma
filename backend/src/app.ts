@@ -2,9 +2,8 @@ import express, { NextFunction,Request,Response } from "express";
 import morgan from 'morgan';
 import createHttpError,{isHttpError} from "http-errors";
 import connectDb from "./config/database.config";
-import { tableRouter } from "./api/index";
+import { nodeRouter, tableRouter,testiRouter } from "./api/index";
 import cors from 'cors'
-import testiRouter from "./api/testimonial/testimonial.routes";
 
 const app= express();
 
@@ -24,6 +23,7 @@ connectDb();
 
 app.use('/api/table',tableRouter)
 app.use('/api/testi',testiRouter);
+app.use('/api/send',nodeRouter);
 
 app.use((req,res,next)=>{
    return next(createHttpError(404,"Endpoint not Found!!"));

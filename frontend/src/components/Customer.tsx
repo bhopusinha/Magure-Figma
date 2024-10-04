@@ -18,7 +18,7 @@ const Customer = () => {
 
         if(response.success){
           setTesti(response.response as testiMonialType[])
-          console.log(response.response);
+          // console.log(response.response);
         }
     }
 

@@ -101,7 +101,7 @@ const HttpMethodProvider: React.FC<{ children: React.ReactNode }> = ({
           return {
             success: true,
             erroMsg: "",
-            response: res.data,
+            response: res.data.data,
           };
         })
         .catch((err) => {
